@@ -1,0 +1,27 @@
+{
+  "name": "google-books",
+  "version": "1.0.0",
+  "description": "search and save books with google api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelMD55/Google-Books.git"
+  },
+  "author": "Angel D.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelMD55/Google-Books/issues"
+  },
+  "homepage": "https://github.com/AngelMD55/Google-Books#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "path": "^0.12.7"
+  }
+}
