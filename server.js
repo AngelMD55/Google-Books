@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production"){
 app.use(routes);
 
 //Connect to MongoDB
-mongoose.connect(process.env.MONGODB || "mongodb://localhost/googleBooks", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooks", { useNewUrlParser: true });
 
 
 //start server
