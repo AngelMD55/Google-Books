@@ -7,6 +7,7 @@ export default function SavedBook(props) {
             <Row>
                 <Col size="12" className="d-flex">
                     <h3 className="float-left ml-4 mt-2" style={{ display: "inLine" }}>{props.title}</h3>
+                    <button type="button" className="btn btn-primary mt-2 mb-2  float-right" onClick={props.deleteSavedBook}>Delete</button>
                     <button type="button" className="btn btn-primary m-2 float-right"><a href={props.link} style={{color:"white"}}>View</a></button>
                 </Col>
             </Row>

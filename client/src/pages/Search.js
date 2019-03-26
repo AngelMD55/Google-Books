@@ -33,7 +33,6 @@ class Search extends Component {
     };
 
     saveOnClick = (title, authors, link, image, description) => {
-        console.log(title, authors, link, image, description)
         API.saveBook({
             title: title,
             authors: authors,

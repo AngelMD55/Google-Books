@@ -19,6 +19,12 @@ class Saved extends Component {
             .catch(err => console.log(err));
     }
 
+    deleteSavedBook = (id) => {
+        API.deleteBook(id)
+            .then(res=> this.loadSavedBooks())
+            .catch(err=> console.log(err))
+    }
+
     render() {
         return (
             <div>
@@ -32,11 +38,13 @@ class Saved extends Component {
                 <h4 className="text-left ml-3 mt-3">Results:</h4>
                 {this.state.savedBooks.map(book => (
                     <Savedbooks
+                    id = {book._id}
                     title = {book.title}
                     authors = {book.authors}
                     description = {book.description}
                     image = {book.image}
                     link = {book.link}
+                    deleteSavedBook = {() => this.deleteSavedBook(book._id)}
                     />
                 ))}
                 </div>
