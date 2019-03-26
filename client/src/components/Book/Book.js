@@ -8,7 +8,7 @@ export default function Book(props) {
                 <Col size="12" className="d-flex">
                     <h3 className="float-left ml-4 mt-2" style={{ display: "inLine" }}>{props.title}</h3>
                     <button type="button" className="btn btn-primary m-2 float-right"><a href={props.link} style={{color:"white"}}>View</a></button>
-                    <button type="button" className="btn btn-primary mt-2 mb-2  float-right" onClick={props.saveOnClick}>Save</button>
+                    <button type="button" className="btn btn-primary mt-2 mb-2  float-right" onClick={() => props.saveOnClick(props.title, props.authors, props.link, props.image, props.description)}>Save</button>
                 </Col>
             </Row>
             <Row>

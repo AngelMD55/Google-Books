@@ -7,12 +7,7 @@ import API from "../utils/API";
 class Search extends Component {
     state = {
         search: "",
-        books: [],
-        title: "",
-        author: "",
-        description: "",
-        image: "",
-        link: ""
+        books: []
     }    
     componentDidMount(){
         this.loadBooks("Harry potter")
@@ -37,10 +32,15 @@ class Search extends Component {
         this.loadBooks(this.state.search)
     };
 
-    saveOnClick = event => {
-        event.preventDefault();
-        alert(this.state.title)
-        
+    saveOnClick = (title, authors, link, image, description) => {
+        console.log(title, authors, link, image, description)
+        API.saveBook({
+            title: title,
+            authors: authors,
+            description: description,
+            image: image,
+            link: link
+        })       
     }
 
     render() {
